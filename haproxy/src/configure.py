@@ -29,6 +29,7 @@ LOG_LEVEL = os.environ.get('LOG_LEVEL', 'notice')
 TIMEOUT_CONNECT = os.environ.get('TIMEOUT_CONNECT', '5000')
 TIMEOUT_CLIENT = os.environ.get('TIMEOUT_CLIENT', '50000')
 TIMEOUT_SERVER = os.environ.get('TIMEOUT_SERVER', '50000')
+TIMEOUT_CHECK = os.environ.get('TIMEOUT_CHECK', '2000')
 HTTPCHK = os.environ.get('HTTPCHK', 'HEAD /')
 HTTPCHK_HOST = os.environ.get('HTTPCHK_HOST', 'localhost')
 INTER = os.environ.get('INTER', '2s')
@@ -236,7 +237,8 @@ with open("/usr/local/etc/haproxy/haproxy.cfg", "w") as configuration:
             LOG_LEVEL=LOG_LEVEL,
             TIMEOUT_CLIENT=TIMEOUT_CLIENT,
             TIMEOUT_CONNECT=TIMEOUT_CONNECT,
-            TIMEOUT_SERVER=TIMEOUT_SERVER
+            TIMEOUT_SERVER=TIMEOUT_SERVER,
+            TIMEOUT_CHECK=TIMEOUT_CHECK,
         )
 
         configuration.write(conf)

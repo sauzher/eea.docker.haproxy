@@ -152,6 +152,7 @@ either when running the container or in a `docker-compose.yml` file.
   * `DNS_ENABLED` DNS lookup provided `BACKENDS`. Use this option when your backends are resolved by an internal/external DNS service (e.g. **Docker 1.11+**, **Rancher**)
   * `DNS_TTL` DNS lookup backends every `DNS_TTL` minutes. Default `1` minute.
   * `TIMEOUT_CONNECT` the maximum time to wait for a connection attempt to a VPS to succeed. Default `5000` ms
+  * `TIMEOUT_CHECK` timeouts apply when the server is expected to send data after TCP connect has established Default `2000` ms
   * `TIMEOUT_CLIENT` timeouts apply when the client is expected to acknowledge or send data during the TCP process. Default `50000` ms
   * `TIMEOUT_SERVER` timeouts apply when the server is expected to acknowledge or send data during the TCP process. Default `50000` ms
   * `HTTPCHK` The HTTP method and uri used to check on the servers health - default `HEAD /`

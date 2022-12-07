@@ -1,5 +1,8 @@
 # Changelog
 
+## 2022-12-07
+- Add `TIMEOUT_CHECK` environment variable to allow a delay in client response time
+
 ## 2022-08-25
 - Add  `MAXCONN` environment variable to limit max connection among backends  (default to `0` - unlimited) [sauzher]
 - Add `STATS_REFRESH` environment variable to enable auto refresh. (default to `0` - no refresh) [sauzher]
